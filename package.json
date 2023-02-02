@@ -41,6 +41,7 @@
     "@storybook/react": "^7.0.0-beta.38",
     "@storybook/testing-library": "^0.0.14-next.1",
     "autoprefixer": "^10.4.13",
+    "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-storybook": "^0.6.10",
     "husky": "^8.0.3",
     "postcss": "^8.4.21",
