@@ -17,6 +17,14 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
+  "lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"eslint --quiet --fix"
+		],
+		"*.{json,js,ts,jsx,tsx,mdx,html,json,css}": [
+			"prettier --write"
+		]
+	},
   "dependencies": {
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
@@ -44,6 +52,7 @@
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-storybook": "^0.6.10",
     "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "storybook": "^7.0.0-beta.38",
