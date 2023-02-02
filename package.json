@@ -18,13 +18,13 @@
     "build-storybook": "storybook build"
   },
   "lint-staged": {
-		"*.{js,jsx,ts,tsx}": [
-			"eslint --quiet --fix"
-		],
-		"*.{json,js,ts,jsx,tsx,mdx,html,json,css}": [
-			"prettier --write"
-		]
-	},
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,js,ts,jsx,tsx,mdx,html,json,css}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
