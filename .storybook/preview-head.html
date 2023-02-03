@@ -1,0 +1,23 @@
+<!-- 
+    WORKAROUND: classTarget of darkMode in preview.ts not working 
+    https://github.com/hipstersmoothie/storybook-dark-mode/issues/174 
+-->
+<script type="text/javascript">
+  function updateTheme() {
+    const themeString = localStorage.getItem('sb-addon-themes-3');
+
+    if (themeString) {
+      const theme = JSON.parse(themeString);
+
+      if (theme['current'] === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else {
+        document.documentElement.classList.add('dark');
+      }
+    }
+  }
+
+  window.addEventListener('storage', (e) => {
+    updateTheme();
+  });
+</script>
