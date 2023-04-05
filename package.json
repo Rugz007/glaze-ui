@@ -1,15 +1,26 @@
 {
-  "name": "glaze-ui",
-  "version": "0.1.0",
-  "private": true,
+  "name": "@bitglaze/glaze-ui",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitglaze/glaze-ui.git"
+  },
+  "version": "0.1.2",
+  "main": "build/index.js",
+  "module": "build/index.es.js",
+  "typings": "build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "license": "MIT",
+  "author": "Bitglaze Technologies Pvt Ltd",
   "engines": {
-    "node": "18.13.0",
-    "yarn": "1.22.19",
+    "node": ">=18.x",
+    "yarn": ">=1.22.19",
     "npm": "please-use-yarn"
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
     "start": "next start",
     "lint": "next lint",
     "prepare": "husky install",
@@ -25,17 +36,40 @@
       "prettier --write"
     ]
   },
+  "resolutions": {
+    "@storybook/react-docgen-typescript-plugin": "npm:react-docgen-typescript-plugin@1.0.2"
+  },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@radix-ui/react-checkbox": "^1.0.3",
+    "@radix-ui/react-dialog": "^1.0.3",
+    "@radix-ui/react-dropdown-menu": "^2.0.4",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-terser": "^0.4.0",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "class-variance-authority": "^0.5.1",
+    "clsx": "^1.2.1",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
+    "lucide-react": "^0.130.1",
     "next": "13.1.6",
+    "node-sass": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rollup": "^3.20.2",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
+    "rollup-plugin-typescript2": "^0.34.1",
+    "tailwind-merge": "^1.12.0",
+    "tailwindcss-animate": "^1.0.5",
     "typescript": "4.9.5"
+  },
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
