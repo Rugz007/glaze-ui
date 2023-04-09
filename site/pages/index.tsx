@@ -1,7 +1,3 @@
-import { Inter } from 'next/font/google';
-
-const inter = Inter({ subsets: ['latin'] });
-
 export default function Home() {
   return (
     <main className="grid w-full h-screen grid-cols-12 bg-slate-100">
