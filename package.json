@@ -19,13 +19,10 @@
     "npm": "please-use-yarn"
   },
   "scripts": {
-    "dev": "next dev",
     "build": "rollup -c rollup.config.js --bundleConfigAsCjs",
-    "start": "next start",
-    "lint": "next lint",
     "prepare": "husky install",
     "prettier": "prettier --write .",
-    "storybook": "storybook dev -p 6006",
+    "dev": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "lint-staged": {
@@ -40,7 +37,7 @@
     "@storybook/react-docgen-typescript-plugin": "npm:react-docgen-typescript-plugin@1.0.2"
   },
   "dependencies": {
-    "@next/font": "13.1.6",
+    "@radix-ui/react-avatar": "^1.0.2",
     "@radix-ui/react-checkbox": "^1.0.3",
     "@radix-ui/react-dialog": "^1.0.3",
     "@radix-ui/react-dropdown-menu": "^2.0.4",
@@ -55,7 +52,6 @@
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "lucide-react": "^0.130.1",
-    "next": "13.1.6",
     "node-sass": "^8.0.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
