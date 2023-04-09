@@ -19,6 +19,9 @@ module.exports = {
       animationDelaySpeed: 500,
       classes: ['bounce', 'heartBeat'],
     },
+    fontFamily: {
+      sans: ['poppins'],
+    },
   },
   plugins: [require('tailwindcss-animate')],
   darkMode: 'class',
