@@ -15,7 +15,7 @@
   "author": "Bitglaze Technologies Pvt Ltd",
   "engines": {
     "node": ">=18.x",
-    "yarn": ">=1.22.19",
+    "yarn": ">=1.22.17",
     "npm": "please-use-yarn"
   },
   "scripts": {
