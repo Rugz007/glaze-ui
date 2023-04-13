@@ -68,3 +68,53 @@ export const Warning: StoryObj<typeof Tag> = {
     },
   },
 };
+
+export const Compare: StoryObj<typeof Tag> = {
+  render: () => (
+    <div>
+      <Tag
+        variant="primary"
+        size="md"
+        onClose={() => {
+          alert('close');
+        }}
+        closeable={true}
+        className="mr-2"
+      >
+        Tag
+      </Tag>
+      <Tag
+        variant="destructive"
+        size="md"
+        onClose={() => {
+          alert('close');
+        }}
+        closeable={true}
+        className="mr-2"
+      >
+        Tag
+      </Tag>
+      <Tag
+        variant="success"
+        size="md"
+        onClose={() => {
+          alert('close');
+        }}
+        closeable={true}
+        className="mr-2"
+      >
+        Tag
+      </Tag>
+      <Tag
+        variant="warning"
+        size="md"
+        onClose={() => {
+          alert('close');
+        }}
+        closeable={true}
+      >
+        Tag
+      </Tag>
+    </div>
+  ),
+};
