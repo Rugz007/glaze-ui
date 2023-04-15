@@ -14,7 +14,13 @@ import {
 
 interface Props {
   variant: 'info' | 'error' | 'success' | 'warning';
-  position: 'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight';
+  position:
+    | 'topLeft'
+    | 'topRight'
+    | 'bottomLeft'
+    | 'bottomRight'
+    | 'topCenter'
+    | 'bottomCenter';
 }
 
 const Toaster: React.FC<Props> = ({ variant, position }) => {

@@ -32,6 +32,8 @@ const toastViewPortVariants = cva('absolute z-[100] p-4 md:max-w-[420px]', {
       topRight: 'top-0 right-0',
       bottomLeft: 'bottom-0 left-0',
       bottomRight: 'bottom-0 right-0',
+      topCenter: 'top-0 left-[37.5%]',
+      bottomCenter: 'bottom-0 left-[37.5%]',
     },
   },
   defaultVariants: {
@@ -82,10 +84,6 @@ const ToastContext = React.createContext<
   'info' | 'error' | 'success' | 'warning'
 >('info');
 
-// const ToastViewportContext = React.createContext<
-//   'topLeft' | 'topRight' | 'bottomLeft' | 'bottomRight'
-// >('topLeft');
-
 const ToastProvider = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Provider>,
   ToasterProps
@@ -103,7 +101,6 @@ const ToastViewport = React.forwardRef<
   React.ElementRef<typeof ToastPrimitives.Viewport>,
   ToasterProps
 >(({ className, position, ...props }, ref) => {
-  // const position= React.useContext(ToastViewportContext);
   return (
     <ToastPrimitives.Viewport
       ref={ref}
