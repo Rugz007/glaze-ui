@@ -18,6 +18,10 @@ const sliderTrackVariants = cva(
         lg: 'h-3',
       },
     },
+    defaultVariants: {
+      variant: 'primary',
+      size: 'md',
+    },
   }
 );
 
@@ -27,6 +31,9 @@ const sliderRangeVariants = cva('absolute h-full ', {
       primary: 'bg-primary-900  dark:bg-primary-400',
       danger: 'bg-red-900  dark:bg-red-400',
     },
+  },
+  defaultVariants: {
+    variant: 'primary',
   },
 });
 const sliderThumbVariants = cva('block rounded-full border-2  ', {
@@ -41,6 +48,10 @@ const sliderThumbVariants = cva('block rounded-full border-2  ', {
       md: 'h-4 w-4',
       lg: 'h-5 w-5',
     },
+  },
+  defaultVariants: {
+    variant: 'primary',
+    size: 'md',
   },
 });
 
