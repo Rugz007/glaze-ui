@@ -4,7 +4,7 @@ import React from 'react';
 import { Button } from '../Button/Button';
 import { ToastAction } from './Toast';
 import { useToast } from '../../Hooks/useToast';
-import Toaster from './Toaster';
+import { Toaster } from './Toaster';
 
 const meta: Meta<typeof Toast> = {
   title: 'Toast',
