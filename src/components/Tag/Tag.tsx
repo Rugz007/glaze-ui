@@ -85,4 +85,4 @@ const Tag = React.forwardRef<HTMLDivElement, TagProps>(
 
 Tag.displayName = 'Tag';
 
-export default Tag;
+export { Tag };

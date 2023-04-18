@@ -75,4 +75,4 @@ const Select: React.FC<SelectProps> = ({ value, options, ...props }) => {
   );
 };
 
-export default Select;
+export { Select };

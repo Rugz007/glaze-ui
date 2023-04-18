@@ -47,4 +47,4 @@ const Toaster: React.FC<Props> = ({ variant, position }) => {
   );
 };
 
-export default Toaster;
+export { Toaster };
