@@ -7,7 +7,6 @@ import {
   TooltipTrigger,
 } from './ToolTip';
 import { Button } from '../Button/Button';
-import { Plus } from 'lucide-react';
 
 const meta: Meta<typeof Tooltip> = {
   title: 'Tooltip',
