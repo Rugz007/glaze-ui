@@ -12,11 +12,11 @@ const toastVariants = cva(
       variant: {
         info: 'bg-white border-slate-200 dark:bg-slate-800 dark:border-slate-700',
         error:
-          'group destructive bg-red-600 text-white border-red-600 dark:border-red-600',
+          'group destructive bg-red-600 text-primary-foreground border-red-600 dark:border-red-600',
         success:
-          'group destructive bg-green-600 text-white border-green-600 dark:border-green-600',
+          'group destructive bg-green-600 text-primary-foreground border-green-600 dark:border-green-600',
         warning:
-          'group destructive bg-yellow-500 text-white border-yellow-500 dark:border-yellow-500',
+          'group destructive bg-yellow-500 text-primary-foreground border-yellow-500 dark:border-yellow-500',
       },
     },
     defaultVariants: {

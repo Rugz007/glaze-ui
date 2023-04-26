@@ -16,20 +16,27 @@ type Story = StoryObj<typeof Button>;
 export const Solid: Story = {
   args: {
     variant: 'solid',
-    children: 'Solid Button',
+    children: 'Button',
   },
 };
 
 export const Outline: Story = {
   args: {
     variant: 'outline',
-    children: 'Outline Button',
+    children: 'Button',
   },
 };
 
-export const Link: Story = {
+export const Ghost: Story = {
   args: {
-    variant: 'link',
-    children: 'Link Button',
+    variant: 'ghost',
+    children: 'Button',
+  },
+};
+
+export const Destrucive: Story = {
+  args: {
+    variant: 'destructive',
+    children: 'Button',
   },
 };

@@ -3,21 +3,20 @@ import { VariantProps, cva } from 'class-variance-authority';
 import { cn } from '@/util/util';
 
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-offset-2 dark:hover:bg-primary-800 dark:hover:text-primary-100 disabled:opacity-50 dark:focus:ring-primary-400 disabled:pointer-events-none dark:focus:ring-offset-primary-700 data-[state=open]:bg-primary-100 dark:data-[state=open]:bg-primary-800',
+  'inline-flex items-center justify-center rounded-sm text-sm font-medium transition-colors focus:outline-none disabled:opacity-50 disabled:pointer-events-none hover:shadow-xs active:shadow-sm',
   {
     variants: {
       variant: {
         solid:
-          'bg-primary-700 text-white hover:bg-primary-600 dark:bg-primary-50 dark:text-primary-700',
+          'bg-primary-600 text-primary-foreground hover:bg-primary-500 active:bg-primary-700',
         destructive:
-          'bg-red-500 text-white hover:bg-red-600 dark:hover:bg-red-600',
+          'bg-red-500 text-primary-foreground hover:bg-red-600 dark:hover:bg-red-600 active:bg-red-700 ',
         outline:
-          'bg-transparent border text-primary-700 border-primary-200 hover:bg-primary-100 dark:border-primary-600 dark:text-primary-100',
+          'bg-transparent border text-primary-700 border-primary-200 hover:bg-primary-100 active:bg-primary-200 dark:border-primary-600 dark:text-primary-100',
         subtle:
           'bg-primary-100 text-primary-700 hover:bg-primary-200 dark:bg-primary-600 dark:text-primary-100',
         ghost:
-          'bg-transparent text-primary-700 hover:bg-primary-100 dark:hover:bg-primary-800 dark:text-primary-100 dark:hover:text-primary-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent',
-        link: 'bg-transparent dark:bg-transparent underline-offset-4 hover:underline text-primary-700 dark:text-primary-100 hover:bg-transparent dark:hover:bg-transparent',
+          'bg-transparent text-primary-700 hover:bg-primary-100 active:bg-primary-200 dark:hover:bg-primary-800 dark:text-primary-100 dark:hover:text-primary-100 data-[state=open]:bg-transparent dark:data-[state=open]:bg-transparent',
       },
       size: {
         md: 'h-10 py-2 px-4',

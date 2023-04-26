@@ -8,12 +8,13 @@ const tagVariants = cva(
     variants: {
       variant: {
         primary:
-          'bg-primary-700 text-white dark:bg-primary-50 dark:text-primary-700',
-        destructive: 'bg-red-500 text-white dark:hover:bg-red-600',
+          'bg-primary-700 text-primary-foreground dark:bg-primary-50 dark:text-primary-700',
+        destructive: 'bg-red-500 text-primary-foreground dark:hover:bg-red-600',
 
-        success: 'bg-green-600 text-white dark:hover:bg-green-600',
+        success: 'bg-green-600 text-primary-foreground dark:hover:bg-green-600',
 
-        warning: 'bg-yellow-600 text-white dark:hover:bg-yellow-600',
+        warning:
+          'bg-yellow-600 text-primary-foreground dark:hover:bg-yellow-600',
       },
       size: {
         md: 'h-6 py-2 px-3',
