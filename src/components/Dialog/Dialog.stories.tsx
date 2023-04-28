@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Button } from '../Button/Button';
+import { Input } from '../Input/Input';
 import React from 'react';
 import {
   Dialog,
@@ -35,11 +36,11 @@ export const Default: Story = {
         <div className="grid gap-4 py-4">
           <div className="grid items-center grid-cols-4 gap-4">
             <h1 className="text-right">Name</h1>
-            <input id="name" value="Pedro Duarte" className="col-span-3" />
+            <Input placeholder="Robin" className="col-span-3" />
           </div>
           <div className="grid items-center grid-cols-4 gap-4">
             <h1 className="text-right">Username</h1>
-            <input id="username" value="@peduarte" className="col-span-3" />
+            <Input id="username" value="@peduarte" className="col-span-3" />
           </div>
         </div>
         <DialogFooter>

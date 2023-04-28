@@ -5,7 +5,8 @@ import clsx from 'clsx';
 
 const controlStyles = {
   base: 'border rounded-lg bg-white hover:cursor-pointer',
-  focus: 'border-primary-600 ring-1 ring-primary-500',
+  focus:
+    'border-primary-600 ring-1 ring-primary-500 transition-color duration-300',
   nonFocus: 'border-slate-300 hover:border-slate-400',
 };
 const placeholderStyles = 'text-slate-500 pl-1 py-0.5';

@@ -13,7 +13,7 @@ const tabsVariants = cva(
         enclosed:
           'rounded-none data-[state=active]:border rounded-t-md border-primary-200 border-b-transparent mb-[-1px] bg-white',
         tiled:
-          'data-[state=active]:bg-white data-[state=active]:text-primary-700 data-[state=active]:shadow-sm text-primary-300 data-[state=active]:bg-primary-700 data-[state=active]:text-primary-100',
+          'data-[state=active]:bg-white data-[state=active]:text-primary-700 data-[state=active]:shadow-sm text-slate-700 data-[state=active]:bg-primary-600 data-[state=active]:text-primary-100 bg-slate-100',
       },
     },
     defaultVariants: {
@@ -22,21 +22,20 @@ const tabsVariants = cva(
   }
 );
 
-const tabsContentVariants = cva(
-  'border border-primary-200 p-6 dark:border-slate-700',
-  {
-    variants: {
-      variant: {
-        underlined: 'mt-0 rounded-b-md',
-        enclosed: 'mt-0',
-        tiled: 'mt-2 rounded-md',
-      },
+const tabsContentVariants = cva('', {
+  variants: {
+    variant: {
+      underlined:
+        'mt-0 rounded-b-md border border-t-1 border-x-0 border-b-0 border-slate-200',
+      enclosed:
+        'mt-0 border border-t-1 border-x-0 border-b-0 border-primary-200',
+      tiled: 'mt-2 rounded-md',
     },
-    defaultVariants: {
-      variant: 'underlined',
-    },
-  }
-);
+  },
+  defaultVariants: {
+    variant: 'underlined',
+  },
+});
 
 interface TabsProps
   extends React.ComponentPropsWithoutRef<typeof TabsPrimitive.Root>,

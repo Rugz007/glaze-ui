@@ -5,7 +5,7 @@ import { cn } from '@/util/util';
 import { VariantProps, cva } from 'class-variance-authority';
 
 const progressVariant = cva(
-  'relative w-full overflow-hidden rounded-full bg-primary-200 dark:bg-primary-800',
+  'relative w-full overflow-hidden rounded-full bg-primary-100 dark:bg-gray-700',
   {
     variants: {
       size: {
@@ -34,7 +34,7 @@ const Progress = React.forwardRef<
     {...props}
   >
     <ProgressPrimitive.Indicator
-      className="h-full w-full flex-1 bg-primary-900 transition-all dark:bg-slate-400"
+      className="flex-1 w-full h-full transition-all rounded-r-lg bg-primary-600"
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
     />
   </ProgressPrimitive.Root>

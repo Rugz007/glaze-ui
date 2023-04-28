@@ -1,20 +1,20 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from './Sheet';
+  Drawer,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from './Drawer';
 import React from 'react';
 import { Button } from '../Button/Button';
 import { Input } from '../Input/Input';
 
-const meta: Meta<typeof Sheet> = {
-  title: 'Sheet',
-  component: Sheet,
+const meta: Meta<typeof Drawer> = {
+  title: 'Drawer',
+  component: Drawer,
   tags: ['autodocs'],
   argTypes: {
     position: {
@@ -30,38 +30,38 @@ const meta: Meta<typeof Sheet> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Sheet>;
+type Story = StoryObj<typeof Drawer>;
 
 export const Default: Story = {
   render: ({ position, size }) => {
     return (
-      <Sheet>
-        <SheetTrigger asChild>
+      <Drawer>
+        <DrawerTrigger asChild>
           <Button variant="outline">Open</Button>
-        </SheetTrigger>
-        <SheetContent position={position} size={size}>
-          <SheetHeader>
-            <SheetTitle>Edit profile</SheetTitle>
-            <SheetDescription>
+        </DrawerTrigger>
+        <DrawerContent position={position} size={size}>
+          <DrawerHeader>
+            <DrawerTitle>Edit profile</DrawerTitle>
+            <DrawerDescription>
               Make changes to your profile here. Click save when you&aposre
               done.
-            </SheetDescription>
-          </SheetHeader>
+            </DrawerDescription>
+          </DrawerHeader>
           <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
+            <div className="grid items-center grid-cols-4 gap-4">
               <p className="text-right">Name</p>
               <Input id="name" value="Pedro Duarte" className="col-span-3" />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
+            <div className="grid items-center grid-cols-4 gap-4">
               <p className="text-right">Username</p>
               <Input id="username" value="@peduarte" className="col-span-3" />
             </div>
           </div>
-          <SheetFooter>
+          <DrawerFooter>
             <Button type="submit">Save changes</Button>
-          </SheetFooter>
-        </SheetContent>
-      </Sheet>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
     );
   },
 };

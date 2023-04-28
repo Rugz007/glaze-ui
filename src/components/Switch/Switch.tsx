@@ -8,7 +8,7 @@ const switchVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'data-[state=checked]:bg-primary-700',
+        primary: 'data-[state=checked]:bg-primary-600',
         danger: 'data-[state=checked]:bg-red-500',
       },
       size: {

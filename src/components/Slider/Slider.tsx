@@ -9,8 +9,8 @@ const sliderTrackVariants = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-primary-200 dark:bg-primary-800',
-        danger: 'bg-red-200 dark:bg-red-800',
+        primary: 'bg-primary-200 dark:bg-gray-600',
+        danger: 'bg-red-200 dark:bg-gray-600',
       },
       size: {
         sm: 'h-1',
@@ -28,20 +28,21 @@ const sliderTrackVariants = cva(
 const sliderRangeVariants = cva('absolute h-full ', {
   variants: {
     variant: {
-      primary: 'bg-primary-900  dark:bg-primary-400',
-      danger: 'bg-red-900  dark:bg-red-400',
+      primary: 'bg-primary-600',
+      danger: 'bg-red-600',
     },
   },
   defaultVariants: {
     variant: 'primary',
   },
 });
-const sliderThumbVariants = cva('block rounded-full border-2  ', {
+const sliderThumbVariants = cva('block rounded-full border-2 shadow-md ', {
   variants: {
     variant: {
       primary:
-        'border-primary-900 bg-white dark:border-primary-100 dark:bg-primary-400',
-      danger: 'border-red-900 bg-white dark:border-red-100 dark:bg-red-400',
+        'border-primary-900 bg-white dark:border-primary-100 dark:bg-primary-400 focus:outline-none',
+      danger:
+        'border-red-900 bg-white dark:border-red-100 dark:bg-red-400 focus:outline-none',
     },
     size: {
       sm: 'h-3 w-3',

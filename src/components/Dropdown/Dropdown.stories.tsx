@@ -16,6 +16,7 @@ const meta: Meta<typeof DropdownMenu> = {
   parameters: {
     controls: { expanded: true },
   },
+  tags: ['autodocs'],
 };
 
 export default meta;

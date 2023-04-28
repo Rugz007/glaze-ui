@@ -17,23 +17,23 @@ const portalVariants = cva('fixed inset-0 z-50 flex', {
   defaultVariants: { position: 'right' },
 });
 
-interface SheetPortalProps
+interface DrawerPortalProps
   extends SheetPrimitive.DialogPortalProps,
     VariantProps<typeof portalVariants> {}
 
-const SheetPortal = ({
+const DrawerPortal = ({
   position,
   className,
   children,
   ...props
-}: SheetPortalProps) => (
+}: DrawerPortalProps) => (
   <SheetPrimitive.Portal className={cn(className)} {...props}>
     <div className={portalVariants({ position })}>{children}</div>
   </SheetPrimitive.Portal>
 );
-SheetPortal.displayName = SheetPrimitive.Portal.displayName;
+DrawerPortal.displayName = SheetPrimitive.Portal.displayName;
 
-const SheetOverlay = React.forwardRef<
+const DrawerOverlay = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Overlay>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, children, ...props }, ref) => (
@@ -46,9 +46,9 @@ const SheetOverlay = React.forwardRef<
     ref={ref}
   />
 ));
-SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
+DrawerOverlay.displayName = SheetPrimitive.Overlay.displayName;
 
-const sheetVariants = cva(
+const drawerVariants = cva(
   'fixed z-50 scale-100 gap-4 bg-background p-6 opacity-100 shadow-lg border',
   {
     variants: {
@@ -136,44 +136,44 @@ const sheetVariants = cva(
   }
 );
 
-export interface SheetProps
+export interface DrawerProps
   extends React.ComponentPropsWithoutRef<typeof SheetPrimitive.Content>,
     React.ComponentPropsWithoutRef<typeof SheetPrimitive.Root>,
-    VariantProps<typeof sheetVariants> {}
+    VariantProps<typeof drawerVariants> {}
 
-const Sheet = React.forwardRef<
+const Drawer = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Root>,
-  SheetProps
+  DrawerProps
 >(({ children, ...props }, ref) => {
   return <SheetPrimitive.Root {...props}>{children}</SheetPrimitive.Root>;
 });
-Sheet.displayName = SheetPrimitive.Root.displayName;
+Drawer.displayName = SheetPrimitive.Root.displayName;
 
-const SheetTrigger = SheetPrimitive.Trigger;
-SheetTrigger.displayName = SheetPrimitive.Trigger.displayName;
+const DrawerTrigger = SheetPrimitive.Trigger;
+DrawerTrigger.displayName = SheetPrimitive.Trigger.displayName;
 
-const SheetContent = React.forwardRef<
+const DrawerContent = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Content>,
-  SheetProps
+  DrawerProps
 >(({ position, size, className, children, ...props }, ref) => (
-  <SheetPortal position={position}>
-    <SheetOverlay />
+  <DrawerPortal position={position}>
+    <DrawerOverlay />
     <SheetPrimitive.Content
       ref={ref}
-      className={cn(sheetVariants({ position, size }), className)}
+      className={cn(drawerVariants({ position, size }), className)}
       {...props}
     >
       {children}
       <SheetPrimitive.Close className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-secondary">
-        <X className="h-4 w-4" />
+        <X className="w-4 h-4" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
     </SheetPrimitive.Content>
-  </SheetPortal>
+  </DrawerPortal>
 ));
-SheetContent.displayName = SheetPrimitive.Content.displayName;
+DrawerContent.displayName = SheetPrimitive.Content.displayName;
 
-const SheetHeader = ({
+const DrawerHeader = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -185,9 +185,9 @@ const SheetHeader = ({
     {...props}
   />
 );
-SheetHeader.displayName = 'SheetHeader';
+DrawerHeader.displayName = 'SheetHeader';
 
-const SheetFooter = ({
+const DrawerFooter = ({
   className,
   ...props
 }: React.HTMLAttributes<HTMLDivElement>) => (
@@ -199,9 +199,9 @@ const SheetFooter = ({
     {...props}
   />
 );
-SheetFooter.displayName = 'SheetFooter';
+DrawerFooter.displayName = 'SheetFooter';
 
-const SheetTitle = React.forwardRef<
+const DrawerTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
 >(({ className, ...props }, ref) => (
@@ -211,9 +211,9 @@ const SheetTitle = React.forwardRef<
     {...props}
   />
 ));
-SheetTitle.displayName = SheetPrimitive.Title.displayName;
+DrawerTitle.displayName = SheetPrimitive.Title.displayName;
 
-const SheetDescription = React.forwardRef<
+const DrawerDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>
 >(({ className, ...props }, ref) => (
@@ -223,14 +223,14 @@ const SheetDescription = React.forwardRef<
     {...props}
   />
 ));
-SheetDescription.displayName = SheetPrimitive.Description.displayName;
+DrawerDescription.displayName = SheetPrimitive.Description.displayName;
 
 export {
-  Sheet,
-  SheetTrigger,
-  SheetContent,
-  SheetHeader,
-  SheetFooter,
-  SheetTitle,
-  SheetDescription,
+  Drawer,
+  DrawerTrigger,
+  DrawerContent,
+  DrawerHeader,
+  DrawerFooter,
+  DrawerTitle,
+  DrawerDescription,
 };

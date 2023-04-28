@@ -16,3 +16,10 @@ export const Default: Story = {
     children: 'Slider',
   },
 };
+
+export const Destructive: Story = {
+  args: {
+    children: 'Slider',
+    variant: 'danger',
+  },
+};

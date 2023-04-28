@@ -21,8 +21,8 @@ export default function Home() {
   };
   return (
     <>
-      <main className="w-full h-screen  bg-white ">
-        <nav className="flex items-center justify-between flex-wrap bg-white p-3 border-b-2">
+      <main className="w-full h-screen bg-white ">
+        <nav className="flex flex-wrap items-center justify-between p-3 bg-white border-b-2">
           <div className="flex items-center flex-shrink-0 text-white ml-52">
             <a>
               <Image src="logo.svg" alt="Logo" width={30} height={30} />
@@ -33,36 +33,35 @@ export default function Home() {
               href="https://github.com/bitglaze/glaze-ui"
               className="text-pink-600 hover:text-pink-500"
             >
-              <AiFillGithub className="h-8 w-8" />
+              <AiFillGithub className="w-8 h-8" />
             </a>
           </div>
         </nav>
-        <div className="grid grid-cols-12 h-screen items-center justify-center">
+        <div className="grid items-center justify-center h-screen grid-cols-12 ">
           <div className="flex flex-col items-center justify-center w-full col-span-6">
-            <div className="flex justify-center mb-0 h-fit ">
-              <img src="logo.svg" alt="logo" className="mb-0 mr-4 h-28" />
-              <h1 className="w-full font-medium text-center h-fit text-8xl">
-                glaze-ui
+            <div className="flex flex-col justify-center mb-0 align-middle ">
+              <h1 className="w-full text-5xl font-medium text-left h-fit">
+                Build the best user experience.
               </h1>
+              <h4 className="my-4 text-3xl text-left">
+                Simple. Flexible. Performant. Remarkable.
+              </h4>
             </div>
-            <h4 className="my-4 text-3xl">
-              Simple. Flexible. Performant. Remarkable.
-            </h4>
-            <Button className="bg-primary-700 mb-4">Get Started</Button>
+            <Button className="mb-4 bg-primary-700">Get Started</Button>
 
             <button
-              className="flex items-center px-4 py-2  group rounded-md bg-slate-50 hover:border-pink-400 group-hover:border-pink-400 transition-colors duration-150 ease-in-out border-2 border-slate-300 "
+              className="flex items-center px-4 py-2 transition-colors duration-150 ease-in-out border-2 rounded-md group bg-slate-50 hover:border-pink-400 group-hover:border-pink-400 border-slate-300 "
               onClick={() => handleClick('npm i @bitglaze/glaze-ui')}
             >
               <p>npm i @bitglaze/glaze-ui</p>
               {copied ? (
-                <BsCheck2 className="h-6 w-6 mr-2 ml-4  text-pink-400" />
+                <BsCheck2 className="w-6 h-6 ml-4 mr-2 text-pink-400" />
               ) : (
-                <MdContentCopy className="h-5 w-5 mr-2 ml-4  group-hover:text-pink-400" />
+                <MdContentCopy className="w-5 h-5 ml-4 mr-2 group-hover:text-pink-400" />
               )}
             </button>
           </div>
-          <div className="col-span-6 flex container mx-auto h-full bg-slate-100 p-14">
+          <div className="container flex h-full col-span-6 mx-auto bg-slate-100 p-14">
             <Button>click</Button>
             <Checkbox>checkbox</Checkbox>
             <DropdownMenu></DropdownMenu>
