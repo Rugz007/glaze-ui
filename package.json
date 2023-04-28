@@ -4,7 +4,7 @@
     "type": "git",
     "url": "https://github.com/bitglaze/glaze-ui.git"
   },
-  "version": "0.2.0",
+  "version": "0.2.7",
   "main": "build/index.js",
   "module": "build/index.es.js",
   "typings": "build/index.d.ts",

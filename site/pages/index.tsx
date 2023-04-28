@@ -38,6 +38,7 @@ export default function Home() {
             <a>
               <Image src="logo.svg" alt="Logo" width={30} height={30} />
             </a>
+            <p className="ml-2 text-2xl text-black">glaze-ui</p>
           </div>
           <div className="flex items-center mr-52">
             <a
@@ -58,8 +59,9 @@ export default function Home() {
                 Simple. Flexible. Performant. Remarkable.
               </h4>
             </div>
-            <Button className="mb-4">Get Started</Button>
-
+            <a href="https://docs.ui.bitglaze.com">
+              <Button className="mb-4">Get Started</Button>
+            </a>
             <button
               className="flex items-center px-4 py-2 transition-colors duration-150 ease-in-out border-2 rounded-md group bg-slate-50 hover:border-primary-400 group-hover:border-primary-400 border-slate-300 "
               onClick={() => handleClick('npm i @bitglaze/glaze-ui')}

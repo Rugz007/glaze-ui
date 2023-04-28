@@ -51,10 +51,11 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
-"@bitglaze/glaze-ui@^0.2.6":
-  version "0.2.6"
-  resolved "https://registry.yarnpkg.com/@bitglaze/glaze-ui/-/glaze-ui-0.2.6.tgz#32c7ba516a00e3a0c23f64f96cc26f124393fbbe"
-  integrity sha512-9C+VoK01JxDobFoo9zMIwndFZ2bDVfSIoZWKazNTedEhgngaNFZLiwI2qiurZxIIlw0Wc6buQn0Qvti4Dcbd+g==
+"@bitglaze/glaze-ui@^0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@bitglaze/glaze-ui/-/glaze-ui-0.2.7.tgz#002eeb4b1185798ae8d0c8db36a86fff3795a7a0"
+  integrity sha512-vm3fX1VqAt4wfp/XHefI05kdqWEge5aJ7uftOpjJtTswc4RXBdXE/N93O38EH8VSLpZMeF9Of9XV4G/KFaSlhg==
+
   dependencies:
     "@heroicons/react" "^2.0.17"
     "@radix-ui/react-avatar" "^1.0.2"
