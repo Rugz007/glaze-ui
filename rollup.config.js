@@ -40,7 +40,6 @@ export default {
       },
       extensions: ['.css'],
       minimize: true,
-      plugins: [tailwindcss(tailwindConfig)],
     }),
   ],
 };

@@ -1,4 +1,14 @@
-import { Button, Checkbox, DropdownMenu } from '@bitglaze/glaze-ui';
+import {
+  Button,
+  Calendar,
+  Checkbox,
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from '@bitglaze/glaze-ui';
 import Image from 'next/image';
 import { AiFillGithub } from 'react-icons/ai';
 import React from 'react';
@@ -6,6 +16,7 @@ import { useState } from 'react';
 import { MdContentCopy } from 'react-icons/md';
 import { BsCheck2 } from 'react-icons/bs';
 import copy from 'clipboard-copy';
+import SampleLogin from '@/components/SampleLogin';
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
@@ -31,7 +42,7 @@ export default function Home() {
           <div className="flex items-center mr-52">
             <a
               href="https://github.com/bitglaze/glaze-ui"
-              className="text-pink-600 hover:text-pink-500"
+              className="text-primary-600 hover:text-primary-500"
             >
               <AiFillGithub className="w-8 h-8" />
             </a>
@@ -47,24 +58,22 @@ export default function Home() {
                 Simple. Flexible. Performant. Remarkable.
               </h4>
             </div>
-            <Button className="mb-4 bg-primary-700">Get Started</Button>
+            <Button className="mb-4">Get Started</Button>
 
             <button
-              className="flex items-center px-4 py-2 transition-colors duration-150 ease-in-out border-2 rounded-md group bg-slate-50 hover:border-pink-400 group-hover:border-pink-400 border-slate-300 "
+              className="flex items-center px-4 py-2 transition-colors duration-150 ease-in-out border-2 rounded-md group bg-slate-50 hover:border-primary-400 group-hover:border-primary-400 border-slate-300 "
               onClick={() => handleClick('npm i @bitglaze/glaze-ui')}
             >
               <p>npm i @bitglaze/glaze-ui</p>
               {copied ? (
-                <BsCheck2 className="w-6 h-6 ml-4 mr-2 text-pink-400" />
+                <BsCheck2 className="w-6 h-6 ml-4 mr-2 text-primary-400" />
               ) : (
-                <MdContentCopy className="w-5 h-5 ml-4 mr-2 group-hover:text-pink-400" />
+                <MdContentCopy className="w-5 h-5 ml-4 mr-2 group-hover:text-primary-400" />
               )}
             </button>
           </div>
-          <div className="container flex h-full col-span-6 mx-auto bg-slate-100 p-14">
-            <Button>click</Button>
-            <Checkbox>checkbox</Checkbox>
-            <DropdownMenu></DropdownMenu>
+          <div className="flex justify-center w-full h-full col-span-6 mx-auto align-center bg-slate-100 p-14">
+            <SampleLogin />
           </div>
         </div>
       </main>
