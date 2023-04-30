@@ -32,9 +32,9 @@ export default function Home() {
   return (
     <div>
       <Navbar />
-      <main className="w-full h-screen bg-white">
-        <div className="grid h-screen grid-cols-1 min-[900px]:grid-cols-2">
-          <div className="flex flex-col items-center justify-center w-full min-[900px]:h-screen">
+      <main className="w-full bg-white">
+        <div className="grid h-[94vh] min-[900px]:grid-cols-2">
+          <div className="flex flex-col items-center justify-center w-full ">
             <div className="flex flex-col justify-center mb-0 align-middle">
               <h1 className="w-full text-3xl min-[900px]:text-5xl font-medium text-center min-[900px]:text-left h-fit">
                 Build the best user experience.
@@ -58,7 +58,8 @@ export default function Home() {
               )}
             </button>
           </div>
-          <div className="flex justify-center w-full min-[900px]:h-full mx-auto align-center bg-slate-100 min-[900px]:p-14">
+          <div className="flex justify-center w-full  mx-auto align-center bg-slate-100 min-[900px]:p-14">
+
             <SampleLogin />
           </div>
         </div>

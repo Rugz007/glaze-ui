@@ -18,7 +18,7 @@ const SampleLogin = () => {
   const [awesome, setAwesome] = useState<boolean>(false);
   return (
     <div className="flex flex-col justify-center w-3/4 align-center">
-      <div className="p-10 border rounded-md bg-background">
+      <div className="max-[580px]:p-4 p-10 border rounded-md bg-background">
         <p className="text-2xl text-center">Sample View </p>
         <br />
         <div className="mb-4">
@@ -60,10 +60,11 @@ const SampleLogin = () => {
                   View more details
                 </Button>
               </DrawerTrigger>
-              <DrawerContent>Test</DrawerContent>
+              <DrawerContent className="w-2/3 max-[580px]:w-full">
+                Test
+              </DrawerContent>
             </Drawer>
           </div>
-
         </div>
         <Button className="w-full mr-3">Create a account</Button>
       </div>

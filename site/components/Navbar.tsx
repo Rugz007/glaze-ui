@@ -3,7 +3,7 @@ import { AiFillGithub } from 'react-icons/ai';
 
 const Navbar = () => {
   return (
-    <nav className="flex flex-wrap items-center justify-between p-3 bg-white border-b-2 sticky top-0 opacity-80">
+    <nav className="flex flex-wrap items-center justify-between p-3 bg-white/80 border-b-2 sticky top-0 backdrop-blur ">
       <div className="flex items-center flex-shrink-0 text-white ml-4 md:ml-52">
         <a>
           <Image src="logo.svg" alt="Logo" width={30} height={30} />
