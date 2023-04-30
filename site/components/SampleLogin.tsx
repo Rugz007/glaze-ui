@@ -40,23 +40,30 @@ const SampleLogin = () => {
             label="Build amazing components?"
           />
         </div>
-        <div className="flex-row mb-4">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant={'outline'}>Select your birthdate</Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <Calendar />
-            </DropdownMenuContent>
-          </DropdownMenu>
-          <Drawer>
-            <DrawerTrigger asChild>
-              <Button className="ml-3" variant={'outline'}>
-                View more details
-              </Button>
-            </DrawerTrigger>
-            <DrawerContent>Test</DrawerContent>
-          </Drawer>
+        <div className="min-[580px]:flex flex-row mb-4 min-[580px]:justify-center min-[580px]:align-center">
+          <div className="flex align-center justify-center">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant={'outline'} className="max-[580px]:mb-2">
+                  Select your birthdate
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent>
+                <Calendar />
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+          <div className="flex align-center justify-center">
+            <Drawer>
+              <DrawerTrigger asChild>
+                <Button className="min-[580px]:ml-3 " variant={'outline'}>
+                  View more details
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent>Test</DrawerContent>
+            </Drawer>
+          </div>
+
         </div>
         <Button className="w-full mr-3">Create a account</Button>
       </div>
